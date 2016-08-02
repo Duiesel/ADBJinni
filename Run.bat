@@ -190,7 +190,7 @@ rem ##http://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=10252
 		if %%a==hide (
 			echo.Hiding %%b
 			echo.Hiding %%b >> %LOG_FILE%
-			call ADB shell pm hide %%c > %TEMP_FILE% & call :TO_LOG
+			call %ADB% shell pm hide %%c > %TEMP_FILE% & call :TO_LOG
 			call :CHECK_STATE
 		)
 	)
@@ -245,5 +245,5 @@ exit /B %ERRORLEVEL%
     echo.                    %PROGRAM_NAME% FINISHED
     echo ***********************************************************************
     echo.
-    call ADB kill-server &pause &exit
+    call %ADB% kill-server &pause &exit
 GOTO:EOF
