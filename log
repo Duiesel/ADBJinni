@@ -1,0 +1,73 @@
+Starting of log file! 02.08.2016 13:44:45,74 
+List of devices attached
+* daemon not running. starting it now on port 5037 *
+* daemon started successfully *
+E6Z5IFFI99999999	device
+
+List of devices attached
+E6Z5IFFI99999999	device
+
+Uninstalling Antivirus_package=/system/vendor/operator/app/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937.apk store.antivirus 
+Failure - not installed for 0
+       FAILED 
+
+Uninstalling Clean_Masterpackage=/system/vendor/operator/app/CleanMaster/CleanMaster.apk com.cleanmaster.mguard 
+Failure - not installed for 0
+       FAILED 
+
+Uninstalling AccuWeather_package=/system/vendor/operator/app/Accuweather/Accuweather.apk com.accuweather.android 
+Failure - not installed for 0
+       FAILED 
+
+Uninstalling UC_package=/system/vendor/operator/app/UCBrowser_Mini/UCBrowser_Mini.apk com.UCMobile.intl 
+Failure - not installed for 0
+       FAILED 
+
+Uninstalling Regim_semya(family_mode)_package=/system/vendor/operator/app/Mi-EasyMode/Mi-EasyMode.apk com.android.MiEasyMode 
+Failure - not installed for 0
+       FAILED 
+
+Hiding Ume_browser_package=/system/priv-app/Browser_P172A40/Browser_P172A40.apk 
+Package com.ume.browser.international new hidden state: true
+Package com.ume.browser.international new hidden state: true
+       Successfully 
+
+Hiding YouTube_package=/system/app/YouTube/YouTube.apk 
+Package com.google.android.youtube new hidden state: true
+Package com.google.android.youtube new hidden state: true
+       Successfully 
+
+Hiding HANGOUTS_package=/system/app/Hangouts/Hangouts.apk 
+Package com.google.android.talk new hidden state: true
+Package com.google.android.talk new hidden state: true
+       Successfully 
+
+Hiding POGODA_WIDJET_package=/system/app/MtkWeatherWidget/MtkWeatherWidget.apk 
+Package com.mediatek.appwidget.weather new hidden state: true
+Package com.mediatek.appwidget.weather new hidden state: true
+       Successfully 
+
+Hiding POGODA_package=/system/app/MtkWeatherProvider/MtkWeatherProvider.apk 
+Package com.mediatek.weather new hidden state: true
+Package com.mediatek.weather new hidden state: true
+       Successfully 
+
+Installing TELEGRAMM 			
+	pkg: /data/local/tmp/org.telegram.messenger_3.10.1-8211_minAPI14(armeabi-v7a)(nodpi)_apkmirror.com.apk
+Failure [INSTALL_FAILED_ALREADY_EXISTS]
+       FAILED 
+
+Installing VIBER 			
+	pkg: /data/local/tmp/com.viber.voip_6.2.0.1251-237_minAPI14(armeabi-v7a,x86)(nodpi)_apkmirror.com.apk
+       FAILED 
+
+Installing WHATSAPP 			
+	pkg: /data/local/tmp/com.whatsapp_2.16.196-451298_minAPI10(armeabi,armeabi-v7a,mips,x86)(nodpi)_apkmirror.com.apk
+Failure [INSTALL_FAILED_ALREADY_EXISTS]
+       FAILED 
+
+Installing GOOGLE_NOW 			
+	pkg: /data/local/tmp/com.google.android.launcher_1.4.large-104001_minAPI16(nodpi)_apkmirror.com.apk
+Failure [INSTALL_FAILED_ALREADY_EXISTS]
+       FAILED 
+

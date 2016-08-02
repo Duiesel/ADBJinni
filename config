@@ -1,0 +1,28 @@
+################################################
+# !!!!!!ВНИМАНИЕ ЭТИ СТРОКИ НЕ УДАЛЯТЬ!!!!!!
+# Структура инструкции для файла конфигураций:
+# Инструкция:Условное название:Путь:символ конца строки(;)
+# На момент написания программы 
+# доступны 3 инструкции: 
+# install
+# uninstall
+# hide
+#
+################################################
+
+uninstall:Antivirus_package=/system/vendor/operator/app/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937.apk:store.antivirus:;
+uninstall:Clean_Masterpackage=/system/vendor/operator/app/CleanMaster/CleanMaster.apk:com.cleanmaster.mguard:;
+uninstall:AccuWeather_package=/system/vendor/operator/app/Accuweather/Accuweather.apk:com.accuweather.android:;
+uninstall:UC_package=/system/vendor/operator/app/UCBrowser_Mini/UCBrowser_Mini.apk:com.UCMobile.intl:;
+uninstall:Regim_semya(family_mode)_package=/system/vendor/operator/app/Mi-EasyMode/Mi-EasyMode.apk:com.android.MiEasyMode:;
+
+hide:Ume_browser_package=/system/priv-app/Browser_P172A40/Browser_P172A40.apk:com.ume.browser.international:;
+hide:YouTube_package=/system/app/YouTube/YouTube.apk:com.google.android.youtube:;
+hide:HANGOUTS_package=/system/app/Hangouts/Hangouts.apk:com.google.android.talk:;
+hide:POGODA_WIDJET_package=/system/app/MtkWeatherWidget/MtkWeatherWidget.apk:com.mediatek.appwidget.weather:;
+hide:POGODA_package=/system/app/MtkWeatherProvider/MtkWeatherProvider.apk:com.mediatek.weather:;
+
+install:TELEGRAMM:install\org.telegram.messenger_3.10.1-8211_minAPI14(armeabi-v7a)(nodpi)_apkmirror.com.apk:;
+install:VIBER:install\com.viber.voip_6.2.0.1251-237_minAPI14(armeabi-v7a,x86)(nodpi)_apkmirror.com.apk:;
+install:WHATSAPP:install\com.whatsapp_2.16.196-451298_minAPI10(armeabi,armeabi-v7a,mips,x86)(nodpi)_apkmirror.com.apk:;
+install:GOOGLE_NOW:install\com.google.android.launcher_1.4.large-104001_minAPI16(nodpi)_apkmirror.com.apk:;
