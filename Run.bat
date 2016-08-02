@@ -106,71 +106,6 @@ echo ***********************************************************************
 call :PARSE_CONFIG_DO_ADB
 goto :CLOSE_TOOL
 
-
-
-rem 	rem cls
-rem 	echo.
-rem     echo ***********************************************************************
-rem     echo.                          CLEANING PLEASE WAIT
-rem     echo ***********************************************************************
-rem     echo.
-rem 	call ADB uninstall store.antivirus ##Antivirus package:/system/vendor/operator/app/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937.apk=store.antivirus > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ADB uninstall com.cleanmaster.mguard ##Clean Masterpackage:/system/vendor/operator/app/CleanMaster/CleanMaster.apk=com.cleanmaster.mguard > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ADB uninstall com.accuweather.android ##AccuWeather package:/system/vendor/operator/app/Accuweather/Accuweather.apk=com.accuweather.android > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ADB uninstall com.UCMobile.intl ## UC package:/system/vendor/operator/app/UCBrowser_Mini/UCBrowser_Mini.apk=com.UCMobile.intl > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ADB uninstall com.android.MiEasyMode ##package:/system/vendor/operator/app/Mi-EasyMode/Mi-EasyMode.apk=com.android.MiEasyMode > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ERROR_COUNT_CHECK
-
-rem :HIDING_SCREEN
-rem 	rem cls
-rem 	echo.
-rem     echo ***********************************************************************
-rem     echo.                          HIDING PLEASE WAIT
-rem     echo ***********************************************************************
-rem     echo.
-rem 	call ADB shell pm hide com.ume.browser.international ##Ume browser package:/system/priv-app/Browser_P172A40/Browser_P172A40.apk=com.ume.browser.international > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ADB shell pm hide com.google.android.youtube ##YouTube package:/system/app/YouTube/YouTube.apk=com.google.android.youtube > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ADB shell pm hide com.google.android.talk ##package:/system/app/Hangouts/Hangouts.apk=com.google.android.talk > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ADB shell pm hide com.mediatek.appwidget.weather ##package:/system/app/MtkWeatherWidget/MtkWeatherWidget.apk=com.mediatek.appwidget.weather > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ADB shell pm hide com.mediatek.weather ##package:/system/app/MtkWeatherProvider/MtkWeatherProvider.apk=com.mediatek.weather > %TEMP_FILE%
-rem 	call :CHECK_STATE
-rem 	call ERROR_COUNT_CHECK
-
-:INSTALLING_SCREEN
-	rem cls
-	rem echo.
- rem    echo ***********************************************************************
- rem    echo.                          INSTALLING PLEASE WAIT
- rem    echo ***********************************************************************
- rem    echo.
- rem    call ADB install %GOOGLE_NOW%  > %TEMP_FILE%
- rem    call :CHECK_STATE
-
- rem    call ADB install %VIBER%  > %TEMP_FILE%
- rem    call :CHECK_STATE
-
- rem    call ADB install %WHATSAPP%  > %TEMP_FILE%
- rem    call :CHECK_STATE
-    
- rem    call ADB install %TELEGRAM%  > %TEMP_FILE%
- rem    call :CHECK_STATE
-    
- rem    call ERROR_COUNT_CHECK
- rem    goto CLOSE_TOOL
-rem adbpackage:/system/app/Music/Music.apk=com.android.music
-rem ##Package com.google.android.youtube new hidden state: true
-
-rem ##http://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=102529
-
 ::function to parse config file. TODO: Have got one param, that can be in 3 states: {install, uninstall, hide}
 :PARSE_CONFIG_DO_ADB
 	
@@ -178,7 +113,7 @@ rem ##http://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=10252
 		if %%a==install (
 			echo.Installing %%b
 			echo.Installing %%b >> %LOG_FILE%			
-			call %ADB% install %WORKINGDIR%%%c > %TEMP_FILE% & call :TO_LOG
+			call %ADB% install "%WORKINGDIR%%%c" > %TEMP_FILE% & call :TO_LOG
 			call :CHECK_STATE
 		)
 		if %%a==uninstall (
