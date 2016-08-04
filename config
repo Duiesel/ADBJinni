@@ -1,28 +1,40 @@
-################################################
+############################################################################################################################
 # !!!!!!ВНИМАНИЕ ЭТИ СТРОКИ НЕ УДАЛЯТЬ!!!!!!
 # Структура инструкции для файла конфигураций:
-# Инструкция:Условное название:Путь:символ конца строки(;)
+# Инструкция:Условное название:Путь:символ конца строки(;) дальше в одну строку можно написать комментарий
 # На момент написания программы 
 # доступны 3 инструкции: 
 # install
 # uninstall
 # hide
 #
-################################################
+###########################################################################################################################
+
+install:TELEGRAMM:install\org.telegram.messenger_3.10.1-8211_minAPI14(armeabi-v7a)(nodpi)_apkmirror.com.apk:;
+install:VIBER:install\com.viber.voip_6.2.0.1251-237_minAPI14(armeabi-v7a,x86)(nodpi)_apkmirror.com.apk:;
+install:WHATSAPP:install\com.whatsapp_2.16.196-451298_minAPI10(armeabi,armeabi-v7a,mips,x86)(nodpi)_apkmirror.com.apk:;
+install:GOOGLE_NOW:install\com.google.android.launcher_1.4.large-104001_minAPI16(nodpi)_apkmirror.com.apk:;
 
 uninstall:Antivirus_package=/system/vendor/operator/app/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937.apk:store.antivirus:;
 uninstall:Clean_Masterpackage=/system/vendor/operator/app/CleanMaster/CleanMaster.apk:com.cleanmaster.mguard:;
 uninstall:AccuWeather_package=/system/vendor/operator/app/Accuweather/Accuweather.apk:com.accuweather.android:;
 uninstall:UC_package=/system/vendor/operator/app/UCBrowser_Mini/UCBrowser_Mini.apk:com.UCMobile.intl:;
 uninstall:Regim_semya(family_mode)_package=/system/vendor/operator/app/Mi-EasyMode/Mi-EasyMode.apk:com.android.MiEasyMode:;
+uninstall:START_LOCKSCREEN_package=/system/vendor/operator/app/Start-ZTE-Passive-release-3.3.5.9-2015.08.13/Start-ZTE-Passive-release-3.3.5.9-2015.08.13.apk:com.celltick.lockscreen:;
 
 hide:Ume_browser_package=/system/priv-app/Browser_P172A40/Browser_P172A40.apk:com.ume.browser.international:;
 hide:YouTube_package=/system/app/YouTube/YouTube.apk:com.google.android.youtube:;
 hide:HANGOUTS_package=/system/app/Hangouts/Hangouts.apk:com.google.android.talk:;
 hide:POGODA_WIDJET_package=/system/app/MtkWeatherWidget/MtkWeatherWidget.apk:com.mediatek.appwidget.weather:;
 hide:POGODA_package=/system/app/MtkWeatherProvider/MtkWeatherProvider.apk:com.mediatek.weather:;
-
-install:TELEGRAMM:install\org.telegram.messenger_3.10.1-8211_minAPI14(armeabi-v7a)(nodpi)_apkmirror.com.apk:;
-install:VIBER:install\com.viber.voip_6.2.0.1251-237_minAPI14(armeabi-v7a,x86)(nodpi)_apkmirror.com.apk:;
-install:WHATSAPP:install\com.whatsapp_2.16.196-451298_minAPI10(armeabi,armeabi-v7a,mips,x86)(nodpi)_apkmirror.com.apk:;
-install:GOOGLE_NOW:install\com.google.android.launcher_1.4.large-104001_minAPI16(nodpi)_apkmirror.com.apk:;
+hide:ZTE_launcher_package=/system/priv-app/LauncherAdapter/LauncherAdapter.apk:com.zte.mifavor.launcher.adapter:; After hiding launcher newly installed is appear automatically
+hide:FMRADIO_package=/system/priv-app/FMRadio/FMRadio.apk:com.android.fmradio:;
+hide:BLOKNOT_package=/system/app/NoteBook/NoteBook.apk:com.mediatek.notebook:;
+hide:PLAY_MUSIC_package=/system/app/Music2/Music2.apk:com.google.android.music:;
+hide:PLAY_FILMS_package=/system/app/Videos/Videos.apk:com.google.android.videos:;
+hide:OBNOVLENIE_ZTE_package=/system/priv-app/ZDMHKV3/ZDMHKV3.apk:com.zte.zdm:;
+hide:ZTE_PODDERGKA_package=/system/priv-app/HandService/HandService.apk:com.zte.handservice:;
+hide:RESERVNOE_KOPIROVANIE_package=/system/app/DataTransfer/DataTransfer.apk:com.mediatek.datatransfer:;
+hide:TOUCHPAL_X_package=/system/priv-app/20141121_TouchPal_Global_v5.5.0.4.93731/20141121_TouchPal_Global_v5.5.0.4.93731.apk:com.cootek.smartinputv5:;
+hide:GOOGLE_PHOTO_package=/system/app/Photos/Photos.apk:com.google.android.apps.photos:;
+hide:REZHIM_SEMYA_package=/system/priv-app/MiEasyModeAPIService/MiEasyModeAPIService.apk:com.android.MiEasyModeAPI:;
