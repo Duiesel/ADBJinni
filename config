@@ -13,7 +13,7 @@
 install:TELEGRAMM:install\org.telegram.messenger_3.10.1-8211_minAPI14(armeabi-v7a)(nodpi)_apkmirror.com.apk:;
 install:VIBER:install\com.viber.voip_6.2.0.1251-237_minAPI14(armeabi-v7a,x86)(nodpi)_apkmirror.com.apk:;
 install:WHATSAPP:install\com.whatsapp_2.16.196-451298_minAPI10(armeabi,armeabi-v7a,mips,x86)(nodpi)_apkmirror.com.apk:;
-install:GOOGLE_NOW:install\com.google.android.launcher_1.4.large-104001_minAPI16(nodpi)_apkmirror.com.apk:;
+install:ASUS_ZEN_Launcher:install\com.asus.launcher_3.0.8.17_170120-1530008087_minAPI18(armeabi)(nodpi)_apkmirror.com.apk:;
 install:BT_CONNECTOR:install\app-release.apk:;
 
 uninstall:Antivirus_package=/system/vendor/operator/app/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937/antivirus-store-4.4.1-213646-328_-_ZTE_-_AV_v4.4.1_MPC-937.apk:store.antivirus:;
