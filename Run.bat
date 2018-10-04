@@ -135,10 +135,31 @@ goto :CLOSE_TOOL
 exit /B %ERRORLEVEL%
 
 :UPDATE_HOSTS_FILE
-    echo.Updating hosts file
-    call adb shell
-    call su
-    echo test >> /system/etc/hosts
+	::Setting up programm name
+	set PROGRAM_NAME=SMARTRESERVE_HOSTS_SHOLE_CHANGER
+	echo.
+    echo ***********************************************************************
+    echo.                   PLEASE ALLOW SU ACCESS ON TABLET PC
+    echo.	                         OR JUST KEEP GOING 
+    echo.                             THEN PRESS ANYKEY
+    echo ***********************************************************************
+    echo.
+    call %ADB% shell "su -c 'echo ROOT ACCESS GRANTED!'"
+    pause
+    cls
+    call %ADB% shell "su -c 'echo 81.19.92.100 smartreserve.ru >> /system/etc/hosts'"
+    call %ADB% shell "su -c 'echo 81.19.92.101 smartreserve.ru >> /system/etc/hosts'"
+    call %ADB% shell "su -c 'echo 81.19.92.102 smartreserve.ru >> /system/etc/hosts'"
+    call %ADB% shell "su -c 'echo 81.19.92.103 smartreserve.ru >> /system/etc/hosts'"
+    echo.
+    echo ***********************************************************************
+    echo.                          FINISHED UPDATING HOSTS
+    echo.                      !!!!!!!TABLET WILL REBOOT!!!!!!!!!!!!
+    echo ***********************************************************************
+    echo.
+    pause
+    call %ADB% reboot
+    call :CLOSE_TOOL
 exit /B %ERRORLEVEL%
 
 ::Function to check Succesful of error state of operation
