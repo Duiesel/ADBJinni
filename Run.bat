@@ -8,7 +8,7 @@ rem cls
 color 0B
 
 ::set some PATH variables
-set WORKINGDIR="" 
+set WORKINGDIR=""
 set WORKINGDIR=%~dp0
 set ADB="%WORKINGDIR%adb\adb.exe"
 set TEMP_FILE="%WORKINGDIR%temp_file"
@@ -22,7 +22,7 @@ if not exist %CONFIG_FILE% (
 	echo NO CONFIG FILE IN WORKING DIRECTORY!
 	echo CLOSING!
 	pause
-	goto :EOF 
+	goto :EOF
 )
 
 @echo Starting of log file! %DATE% %TIME% > %LOG_FILE%
@@ -73,13 +73,14 @@ if %ERRORLEVEL%==0 (
     echo.
     echo.
     echo. . ^type " GO " ^for ^start customizing ZTE BLADE L5 Phone . . .
+    echo. . ^type " HOSTS " ^to add emergency smartreserve hosts . . .
     echo.
     echo. . ^type quit or ^exit to cancel and close this window
-    echo.                             
+    echo.
     echo.                     developed by Alan Mologorskiy
     echo.                           duiesel^@gmail.com
     echo.                            in Rambler^&Co
-    echo.                                  2016
+    echo.                                  2018
     echo =======================================================================
 	set choice=
     echo.&set /p choice=:
@@ -87,8 +88,10 @@ if %ERRORLEVEL%==0 (
     :: alternative platform-tools
     rem if %choice% == ALTTOOLS1 set PLATFORM_TOOLS=%FUNCTION%platform-tools_alt1\&set default-color=color 0D &goto:FIRST_SCREEN
 
-    :: the only accepted answer to continue
+    :: answer for ZTE customizing
     if %choice% == GO (goto:CLEANING_SCREEN)
+    :: answer for 3.10.2018 issue with smartreserve hosts
+    if %choice% == HOSTS (goto:UPDATE_HOSTS_FILE)
 
     ::remap commonly used commands for exiting
     if %choice% == e GOTO:CLOSE_TOOL
@@ -108,11 +111,11 @@ goto :CLOSE_TOOL
 
 ::function to parse config file. TODO: Have got one param, that can be in 3 states: {install, uninstall, hide}
 :PARSE_CONFIG_DO_ADB
-	
+
 	for /F "tokens=1,2,3 delims=: skip=12 usebackq" %%a in (%CONFIG_FILE%) do (
 		if %%a==install (
 			echo.Installing %%b
-			echo.Installing %%b >> %LOG_FILE%			
+			echo.Installing %%b >> %LOG_FILE%
 			call %ADB% install "%WORKINGDIR%%%c" > %TEMP_FILE% & call :TO_LOG
 			call :CHECK_STATE
 		)
@@ -129,6 +132,13 @@ goto :CLOSE_TOOL
 			call :CHECK_STATE
 		)
 	)
+exit /B %ERRORLEVEL%
+
+:UPDATE_HOSTS_FILE
+    echo.Updating hosts file
+    call adb shell
+    call su
+    echo test >> /system/etc/hosts
 exit /B %ERRORLEVEL%
 
 ::Function to check Succesful of error state of operation
